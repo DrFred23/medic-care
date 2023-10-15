@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 /**
  * IndexController
  *
- * @Author: Xiangnan Liu
+ * @Author: Alfred
  * @CreateTime: 2023-10-15
  */
 @Controller

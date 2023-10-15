@@ -7,7 +7,7 @@ import java.util.Date;
 /**
  * User
  *
- * @Author: Xiangnan Liu
+ * @Author: Alfred
  * @CreateTime: 2023-10-15
  */
 @Entity
