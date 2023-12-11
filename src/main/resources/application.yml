@@ -2,8 +2,8 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://mydb.co5ws1upvldj.eu-north-1.rds.amazonaws.com:3306/mediccare
-    username: root
+    url: jdbc:mysql://mediccare.co5ws1upvldj.eu-north-1.rds.amazonaws.com:3306/mediccare
+    username: admin
     password: 12345678
   jpa:
     hibernate:
