@@ -12,8 +12,27 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class IndexController {
 
-    @GetMapping("/hello")
-    public String hello(){
+    @GetMapping("/")
+    public String index(){
         return "index";
+    }
+
+    @GetMapping("/doctor/login")
+    public String doctorLogin(){
+        return "page/doctor-login";
+    }
+    @GetMapping("/doctor/register")
+    public String doctorRegister(){
+        return "page/doctor-register";
+    }
+
+    @GetMapping("/patient/login")
+    public String patientLogin(){
+        return "page/patient-login";
+    }
+
+    @GetMapping("/patient/register")
+    public String patientRegister(){
+        return "page/patient-register";
     }
 }

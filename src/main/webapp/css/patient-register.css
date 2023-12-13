@@ -1,0 +1,32 @@
+body {
+            background-image: url('../img/medical_background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        .container {
+            margin-top: 100px;
+        }
+
+        .form-container {
+            background-color: #9de8f0;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .form-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .btn-submit {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        .required {
+            color: red;
+        }

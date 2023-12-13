@@ -1,0 +1,47 @@
+body {
+            background-image: url('../img/medical_background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        .container {
+            margin-top: 100px;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .login-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #ffc107b3;
+        }
+
+        .login-heading {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .login-form {
+            margin-top: 20px;
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+        }
+
+        .login-btn {
+            font-size: 1.5em;
+        }
+
+        .patient-login {
+            font-size: 1.2em;
+            margin-top: 15px;
+            color: #007bff;
+        }
