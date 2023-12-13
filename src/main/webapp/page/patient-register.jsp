@@ -22,18 +22,18 @@
         <i class="fas fa-user-plus form-icon"></i>
         <h2 class="mb-4">Patient Registration</h2>
 
-        <form onsubmit="return validateForm()">
+        <form onsubmit="return validateForm()" action="${pageContext.request.contextPath}/patient/process" method="post">
             <div class="mb-3 row d-flex justify-content-center">
                 <label for="username" class="col-sm-2 col-form-label text-end required">Username *</label>
                 <div class="col-sm-4">
-                    <input type="text" class="form-control" id="username" placeholder="Enter username" required>
+                    <input type="text" class="form-control" id="username" placeholder="Enter username" name="username" required>
                 </div>
             </div>
 
             <div class="mb-3 row d-flex justify-content-center">
                 <label for="password" class="col-sm-2 col-form-label text-end required">Password *</label>
                 <div class="col-sm-4">
-                    <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+                    <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
                 </div>
             </div>
 
@@ -47,7 +47,7 @@
             <div class="mb-3 row d-flex justify-content-center">
                 <label for="gender" class="col-sm-2 col-form-label text-end required">Gender *</label>
                 <div class="col-sm-4">
-                    <select class="form-select" id="gender" required>
+                    <select class="form-select" id="gender" name="gender" required>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                         <option value="secret">Secret</option>
@@ -58,21 +58,21 @@
             <div class="mb-3 row d-flex justify-content-center">
                 <label for="dob" class="col-sm-2 col-form-label text-end required">Date of Birth *</label>
                 <div class="col-sm-4">
-                    <input type="date" class="form-control" id="dob" required>
+                    <input type="date" class="form-control" id="dob" name="dob" required>
                 </div>
             </div>
 
             <div class="mb-3 row d-flex justify-content-center">
                 <label for="email" class="col-sm-2 col-form-label text-end">Email</label>
                 <div class="col-sm-4">
-                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
                 </div>
             </div>
 
             <div class="mb-3 row d-flex justify-content-center">
                 <label for="phone" class="col-sm-2 col-form-label text-end">Phone</label>
                 <div class="col-sm-4">
-                    <input type="tel" class="form-control" id="phone" placeholder="Enter phone number">
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter phone number" name="phone">
                 </div>
             </div>
 

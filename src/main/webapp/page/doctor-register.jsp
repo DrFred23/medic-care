@@ -22,18 +22,18 @@
         <i class="fas fa-user-plus form-icon"></i>
         <h2 class="mb-4">Doctor Registration</h2>
 
-        <form onsubmit="return validateForm()">
+        <form onsubmit="return validateForm()" action="${pageContext.request.contextPath}/doctor/process" method="post">
             <div class="mb-3 row d-flex justify-content-center">
                 <label for="username" class="col-sm-2 col-form-label text-end required">Doctor Code *</label>
                 <div class="col-sm-4">
-                    <input type="text" class="form-control" id="username" placeholder="Enter username" required>
+                    <input type="text" class="form-control" id="username" placeholder="Enter username" name="username" required>
                 </div>
             </div>
 
             <div class="mb-3 row d-flex justify-content-center">
                 <label for="password" class="col-sm-2 col-form-label text-end required">Password *</label>
                 <div class="col-sm-4">
-                    <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+                    <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
                 </div>
             </div>
 

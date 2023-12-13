@@ -3,16 +3,17 @@
 
 <mapper namespace="com.nci.mediccare.mapper.UserMapper">
 
-    <insert id="insert" parameterType="com.nci.mediccare.domain.User">
-        INSERT INTO user(
-            name, password, create_time, update_time
-        )
-        VALUES (
-            #{name},
-            #{password},
-            #{createTime},
-            #{updateTime}
-               )
+    <insert id="insert" parameterType="com.nci.mediccare.domain.User" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO user(username, password, gender, dob, email, phone, type, create_time, update_time)
+        VALUES (#{username},
+                #{password},
+                #{gender},
+                #{dob},
+                #{email},
+                #{phone},
+                #{type},
+                #{createTime},
+                #{updateTime})
     </insert>
 
 </mapper>

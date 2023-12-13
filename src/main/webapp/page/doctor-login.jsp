@@ -20,7 +20,7 @@
     <div class="row justify-content-center">
         <div class="col-md-6 login-container">
             <i class="fas fa-user-circle login-icon"></i>
-            <h2 class="login-heading">User Login</h2>
+            <h2 class="login-heading">Doctor Login</h2>
             <form class="login-form">
                 <div class="mb-3">
                     <input type="text" class="form-control" placeholder="Username" required>

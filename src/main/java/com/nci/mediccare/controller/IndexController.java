@@ -2,13 +2,8 @@ package com.nci.mediccare.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
-/**
- * IndexController
- *
- * @Author: Alfred
- * @CreateTime: 2023-10-15
- */
 @Controller
 public class IndexController {
 
@@ -17,22 +12,10 @@ public class IndexController {
         return "index";
     }
 
-    @GetMapping("/doctor/login")
-    public String doctorLogin(){
-        return "page/doctor-login";
-    }
-    @GetMapping("/doctor/register")
-    public String doctorRegister(){
-        return "page/doctor-register";
+    @GetMapping("/cases")
+    public String cases(@RequestParam long id){
+
+        return "page/cases";
     }
 
-    @GetMapping("/patient/login")
-    public String patientLogin(){
-        return "page/patient-login";
-    }
-
-    @GetMapping("/patient/register")
-    public String patientRegister(){
-        return "page/patient-register";
-    }
 }
