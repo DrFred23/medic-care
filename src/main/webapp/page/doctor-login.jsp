@@ -21,12 +21,15 @@
         <div class="col-md-6 login-container">
             <i class="fas fa-user-circle login-icon"></i>
             <h2 class="login-heading">Doctor Login</h2>
-            <form class="login-form">
+            <form class="login-form" action="${pageContext.request.contextPath}/doctor/loginProcess" method="post">
                 <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Username" required>
+                    <input type="text" class="form-control" placeholder="Username" name="username" required>
                 </div>
                 <div class="mb-3">
-                    <input type="password" class="form-control" placeholder="Password" required>
+                    <input type="password" class="form-control" placeholder="Password" name="password" required>
+                </div>
+                <div class="mb-3 alert alert-danger ${not empty errorMessage ? '' : 'd-none'}">
+                    Incorrect username or password, please try again.
                 </div>
                 <button type="submit" class="btn btn-primary btn-block login-btn">Login</button>
             </form>

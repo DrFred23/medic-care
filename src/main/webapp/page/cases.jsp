@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +52,7 @@
         </div>
 
         <!-- Add Case Button -->
-        <div class="add-case-btn">
+        <div class="add-case-btn ${user.type eq 0 ? '' : 'd-none'}">
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCaseModal">Add
                 Case
             </button>
@@ -73,33 +74,33 @@
                     <!-- Sample: Patient Name Dropdown -->
                     <div class="mb-3">
                         <label for="patientName" class="form-label">Patient Name *</label>
-                        <select class="form-select" id="patientName" required>
-                            <option value="john_doe">John Doe</option>
-                            <option value="jane_doe">Jane Doe</option>
-                            <!-- Add more patient options as needed -->
+                        <select class="form-select" id="patientName" name="patientId" required>
+                            <c:forEach items="${allUsers}" var="user">
+                                <option value="${user.id}">${user.username}</option>
+                            </c:forEach>
                         </select>
                     </div>
 
                     <!-- Sample: Disease Input -->
                     <div class="mb-3">
                         <label for="disease" class="form-label">Disease *</label>
-                        <input type="text" class="form-control" id="disease" required>
+                        <input type="text" class="form-control" id="disease" name="disease" required>
                     </div>
 
                     <!-- Sample: Status Dropdown -->
                     <div class="mb-3">
                         <label for="status" class="form-label">Status *</label>
-                        <select class="form-select" id="status" required>
-                            <option value="in_progress">In Progress</option>
-                            <option value="completed">Completed</option>
-                            <!-- Add more status options as needed -->
+                        <select class="form-select" id="status" name="status" required>
+                            <option value="Confirmed">Confirmed</option>
+                            <option value="Treating">Treating</option>
+                            <option value="Recovered">Recovered</option>
                         </select>
                     </div>
 
                     <!-- Sample: Remarks Textarea -->
                     <div class="mb-3">
                         <label for="remarks" class="form-label">Remarks</label>
-                        <textarea class="form-control" id="remarks" rows="3"></textarea>
+                        <textarea class="form-control" id="remarks" rows="3" name="remarks"></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Submit</button>

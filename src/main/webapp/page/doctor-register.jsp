@@ -22,12 +22,16 @@
         <i class="fas fa-user-plus form-icon"></i>
         <h2 class="mb-4">Doctor Registration</h2>
 
-        <form onsubmit="return validateForm()" action="${pageContext.request.contextPath}/doctor/process" method="post">
+        <form onsubmit="return validateForm()" action="${pageContext.request.contextPath}/doctor/registerProcess" method="post">
             <div class="mb-3 row d-flex justify-content-center">
                 <label for="username" class="col-sm-2 col-form-label text-end required">Doctor Code *</label>
                 <div class="col-sm-4">
                     <input type="text" class="form-control" id="username" placeholder="Enter username" name="username" required>
                 </div>
+            </div>
+
+            <div class="mb-3 alert alert-danger ${not empty errorMessage ? '' : 'd-none'}">
+                This account already exists, please try to register another account.
             </div>
 
             <div class="mb-3 row d-flex justify-content-center">

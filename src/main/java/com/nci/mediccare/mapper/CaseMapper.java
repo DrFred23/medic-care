@@ -1,10 +1,12 @@
-package com.nci.mediccare.manager;
+package com.nci.mediccare.mapper;
 
 import com.nci.mediccare.domain.CaseInfo;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
-public interface CasesManager {
+@Mapper
+public interface CaseMapper {
     void insert(CaseInfo caseInfo);
 
     List<CaseInfo> selectAllCases();

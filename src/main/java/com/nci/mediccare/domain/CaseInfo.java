@@ -15,7 +15,7 @@ public class CaseInfo {
     private String gender;
     private Date dob;
     private String disease;
-    private Integer status;
+    private String status;
     private String remarks;
     private Date createTime;
     private Date updateTime;
@@ -68,11 +68,11 @@ public class CaseInfo {
         this.disease = disease;
     }
 
-    public Integer getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 

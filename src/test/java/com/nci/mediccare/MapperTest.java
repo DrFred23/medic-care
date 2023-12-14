@@ -11,7 +11,7 @@ import java.util.Date;
 /**
  * MapperTest
  *
- * @Author: Xiangnan Liu
+ * @Author: Alfred
  * @CreateTime: 2023-10-15
  */
 @SpringBootTest
@@ -20,9 +20,9 @@ public class MapperTest {
     private UserMapper userMapper;
 
     @Test
-    public void testUserInsert(){
+    public void testUserInsert() {
         User user = new User();
-        user.setName("Alfred");
+        user.setUsername("Alfred");
         user.setPassword("321");
         user.setCreateTime(new Date());
         userMapper.insert(user);

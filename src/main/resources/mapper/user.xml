@@ -16,4 +16,31 @@
                 #{updateTime})
     </insert>
 
+    <select id="login" parameterType="com.nci.mediccare.pojo.UserPojo">
+        SELECT *
+        FROM user
+        WHERE username = #{username}
+          AND password = #{password}
+          AND type = #{type}
+    </select>
+
+    <select id="selectById">
+        SELECT *
+        FROM user
+        WHERE id = #{id}
+    </select>
+
+    <select id="selectAllPatients">
+        SELECT *
+        FROM user
+        WHERE type = 1
+    </select>
+
+    <select id="selectByNameAndType" parameterType="com.nci.mediccare.pojo.UserPojo">
+        SELECT *
+        FROM user
+        WHERE username = #{username}
+          AND type = #{type}
+    </select>
+
 </mapper>

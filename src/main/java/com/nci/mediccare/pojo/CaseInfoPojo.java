@@ -2,7 +2,6 @@ package com.nci.mediccare.pojo;
 
 public class CaseInfoPojo {
     private Long patientId;
-    private String patientName;
     private String disease;
     private String status;
     private String remarks;
@@ -13,14 +12,6 @@ public class CaseInfoPojo {
 
     public void setPatientId(Long patientId) {
         this.patientId = patientId;
-    }
-
-    public String getPatientName() {
-        return patientName;
-    }
-
-    public void setPatientName(String patientName) {
-        this.patientName = patientName;
     }
 
     public String getDisease() {
