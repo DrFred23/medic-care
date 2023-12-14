@@ -8,14 +8,17 @@
 		<version>3.1.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>com.nci</groupId>
 	<artifactId>medic-care</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>war</packaging>
 	<name>medic-care</name>
 	<description>medic-care</description>
+
 	<properties>
-		<java.version>11</java.version>
+		<java.version>21</java.version>
+		<spring.version>6.0.11</spring.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -26,6 +29,11 @@
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>3.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<dependency>
