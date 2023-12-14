@@ -4,7 +4,8 @@
 <mapper namespace="com.nci.mediccare.mapper.CaseMapper">
 
     <insert id="insert" parameterType="com.nci.mediccare.domain.CaseInfo" useGeneratedKeys="true" keyProperty="id">
-        INSERT INTO case_info (patient_id, patient_name, gender, dob, disease, status, remarks, create_time, update_time)
+        INSERT INTO case_info (patient_id, patient_name, gender, dob, disease, status, remarks, create_time,
+                               update_time)
         VALUES (#{patientId},
                 #{patientName},
                 #{gender},
@@ -15,6 +16,12 @@
                 #{createTime},
                 #{updateTime})
     </insert>
+
+    <delete id="deleteById">
+        DELETE
+        FROM case_info
+        WHERE id = #{id}
+    </delete>
 
     <select id="selectAllCases">
         SELECT *

@@ -7,6 +7,9 @@ import java.util.List;
 
 @Mapper
 public interface CaseMapper {
+
+    void deleteById(long id);
+
     void insert(CaseInfo caseInfo);
 
     List<CaseInfo> selectAllCases();

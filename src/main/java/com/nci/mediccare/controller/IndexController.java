@@ -5,13 +5,11 @@ import com.nci.mediccare.domain.User;
 import com.nci.mediccare.manager.CasesManager;
 import com.nci.mediccare.manager.UserManager;
 import com.nci.mediccare.pojo.CaseInfoPojo;
+import com.nci.mediccare.pojo.DoctorCasePojo;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
@@ -42,7 +40,7 @@ public class IndexController {
             caseInfos = casesManager.selectAllCases();
             List<User> users = userManager.selectAllPatients();
             model.addAttribute("allUsers", users);
-        }else{
+        } else {
             caseInfos = casesManager.selectCasesByPatientId(user.getId());
         }
         model.addAttribute("caseInfos", caseInfos);
@@ -68,9 +66,9 @@ public class IndexController {
     }
 
     @PostMapping("/deleteCase")
-    public String deleteCase(){
-
-        return null;
+    public String deleteCase(@RequestBody DoctorCasePojo pojo) {
+        casesManager.deleteById(pojo.getCaseId());
+        return "redirect:/cases?id=" + pojo.getDoctorId();
     }
-
+    
 }

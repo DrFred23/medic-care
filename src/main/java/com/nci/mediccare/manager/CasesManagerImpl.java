@@ -14,6 +14,11 @@ public class CasesManagerImpl implements CasesManager {
     private CaseMapper caseMapper;
 
     @Override
+    public void deleteById(long id) {
+        caseMapper.deleteById(id);
+    }
+
+    @Override
     public void insert(CaseInfo caseInfo) {
         caseMapper.insert(caseInfo);
     }
