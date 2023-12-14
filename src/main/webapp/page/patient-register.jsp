@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,9 +52,9 @@
                 <label for="gender" class="col-sm-2 col-form-label text-end required">Gender *</label>
                 <div class="col-sm-4">
                     <select class="form-select" id="gender" name="gender" required>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="secret">Secret</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Secret">Secret</option>
                     </select>
                 </div>
             </div>

@@ -51,7 +51,7 @@ public class IndexController {
     }
 
     @PostMapping("/createCase")
-    public String createCase(@RequestParam long id, @ModelAttribute CaseInfoPojo pojo) {
+    public String createCase(@RequestParam long userId, @ModelAttribute CaseInfoPojo pojo) {
         User patient = userManager.selectById(pojo.getPatientId());
         CaseInfo caseInfo = new CaseInfo();
         caseInfo.setCreateTime(new Date());
@@ -64,7 +64,13 @@ public class IndexController {
         caseInfo.setPatientName(patient.getUsername());
         casesManager.insert(caseInfo);
 
-        return "redirect:/cases?id=" + id;
+        return "redirect:/cases?id=" + userId;
+    }
+
+    @PostMapping("/deleteCase")
+    public String deleteCase(){
+
+        return null;
     }
 
 }

@@ -4,14 +4,17 @@ function deleteCase(caseId) {
     }
 
     // ... (Your existing JavaScript code)
-	document.getElementById('addCaseForm').addEventListener('submit', function (event) {
-        // Add your logic to handle form submission (e.g., send data to the server)
-        alert('Form submitted!');
-        event.preventDefault(); // Prevent the default form submission
-        // Close the modal if needed
-        var modal = new bootstrap.Modal(document.getElementById('addCaseModal'));
-        modal.hide();
-    });
+    var addCaseForm = document.getElementById('addCaseForm');
+    if(addCaseForm){
+        addCaseForm.addEventListener('submit', function (event) {
+            // Add your logic to handle form submission (e.g., send data to the server)
+            // alert('Form submitted!');
+            // event.preventDefault(); // Prevent the default form submission
+            // Close the modal if needed
+            var modal = new bootstrap.Modal(document.getElementById('addCaseModal'));
+            modal.hide();
+        });
+    }
 
     // Weather API
     const weatherUrl = 'https://weatherapi-com.p.rapidapi.com/current.json';
