@@ -1,60 +1,60 @@
 body {
-            background-color: #f8f9fa;
-            color: #495057;
-        }
+    background-color: #f8f9fa;
+    color: #495057;
+}
 
-        .container {
-            margin-top: 50px;
-        }
+.container {
+    margin-top: 50px;
+}
 
-        /* Adjusted width for .case-container */
-        .case-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 80%; /* Adjust the width as needed */
-        }
+/* Adjusted width for .case-container */
+.case-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Adjust the width as needed */
+}
 
-        .case-header {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
+.case-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
-        .case-item {
-            border-bottom: 1px solid #ddd;
-            padding: 10px 0;
-            display: flex;
-            justify-content: space-between;
-        }
+.case-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
 
-        .case-item .delete-btn {
-            cursor: pointer;
-            color: #dc3545;
-        }
+.case-item .delete-btn {
+    cursor: pointer;
+    color: #dc3545;
+}
 
-        .add-case-btn {
-            margin-top: 20px;
-        }
+.add-case-btn {
+    margin-top: 20px;
+}
 
-        /* Weather Widget Styles */
-        .weather-widget {
-            position: fixed;
-            top: 5px;
-            right: 5px;
-            padding: 10px;
-            border-radius: 5px;
-            text-align: center;
-        }
+/* Weather Widget Styles */
+.weather-widget {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
 
-        /* Translation Plugin Styles */
-        .translation-plugin {
-            position: fixed;
-            top: 150px; /* Adjust the top position as needed */
-            right: 5px;
-            padding: 10px;
-            border-radius: 5px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+/* Translation Plugin Styles */
+.translation-plugin {
+    position: fixed;
+    top: 150px; /* Adjust the top position as needed */
+    right: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
