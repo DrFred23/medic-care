@@ -1,0 +1,9 @@
+/* Custom styles for the breadcrumb */
+.breadcrumb-container {
+    margin-top: 20px; /* Adjust distance from top of screen */
+    margin-left: 30px; /* Adjust the distance from the left side of the screen */
+}
+
+.breadcrumb-container ol.breadcrumb {
+    font-size: 25px; /* Adjust font size */
+}

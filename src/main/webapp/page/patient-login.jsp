@@ -12,15 +12,24 @@
 
     <!-- Font Awesome Icon Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/patient-login.css">
 </head>
 <body>
+
+<nav aria-label="breadcrumb" class="breadcrumb-container">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Patient Login</li>
+    </ol>
+</nav>
 
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6 login-container">
             <i class="fas fa-user-circle login-icon"></i>
-            <h2 class="login-heading">User Login</h2>
+            <h2 class="login-heading">Patient Login</h2>
             <form class="login-form" action="${pageContext.request.contextPath}/patient/loginProcess" method="post">
                 <div class="mb-3">
                     <input type="text" class="form-control" placeholder="Username" name="username" required>
