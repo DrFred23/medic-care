@@ -28,7 +28,10 @@ function deleteCase(caseId, userId) {
 
 }
 
-
+/**
+ * Show add case form
+ * @type {HTMLElement}
+ */
 var addCaseForm = document.getElementById('addCaseForm');
 if (addCaseForm) {
     addCaseForm.addEventListener('submit', function (event) {
@@ -39,6 +42,16 @@ if (addCaseForm) {
         var modal = new bootstrap.Modal(document.getElementById('addCaseModal'));
         modal.hide();
     });
+}
+
+/**
+ * Google translation
+ */
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
 }
 
 // Weather API
