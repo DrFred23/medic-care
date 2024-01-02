@@ -121,6 +121,7 @@
 
 <!-- Weather Widget -->
 <div class="weather-widget">
+    <div id="location"></div>
     <div id="weatherDescription"></div>
     <img id="weatherIcon" alt="Weather Icon">
     <div id="temperature"></div>
