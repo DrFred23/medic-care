@@ -24,8 +24,18 @@ public class CasesManagerImpl implements CasesManager {
     }
 
     @Override
+    public void update(CaseInfo caseInfo) {
+        caseMapper.update(caseInfo);
+    }
+
+    @Override
     public List<CaseInfo> selectAllCases() {
         return caseMapper.selectAllCases();
+    }
+
+    @Override
+    public CaseInfo selectById(Long caseId) {
+        return caseMapper.selectById(caseId);
     }
 
     @Override

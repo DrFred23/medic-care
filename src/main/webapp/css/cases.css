@@ -29,6 +29,17 @@ body {
     justify-content: space-between;
 }
 
+.case-item .action-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.case-item .action-buttons div{
+    margin-right: auto;
+}
+
 .case-item .delete-btn {
     cursor: pointer;
     color: #dc3545;

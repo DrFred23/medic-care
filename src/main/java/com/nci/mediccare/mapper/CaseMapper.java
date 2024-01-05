@@ -12,7 +12,11 @@ public interface CaseMapper {
 
     void insert(CaseInfo caseInfo);
 
+    void update(CaseInfo caseInfo);
+
     List<CaseInfo> selectAllCases();
+
+    CaseInfo selectById(Long caseId);
 
     List<CaseInfo> selectCasesByPatientId(long patientId);
 }

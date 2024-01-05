@@ -35,13 +35,25 @@ function deleteCase(caseId, userId) {
 var addCaseForm = document.getElementById('addCaseForm');
 if (addCaseForm) {
     addCaseForm.addEventListener('submit', function (event) {
-        // Add your logic to handle form submission (e.g., send data to the server)
-        // alert('Form submitted!');
-        // event.preventDefault(); // Prevent the default form submission
-        // Close the modal if needed
         var modal = new bootstrap.Modal(document.getElementById('addCaseModal'));
         modal.hide();
     });
+}
+
+function editCase(caseId, patientId, disease, status, remarks) {
+    console.log(patientId);
+    document.getElementById('patientName').value = patientId;
+    document.getElementById('disease').value = disease;
+    document.getElementById('status').value = status;
+    document.getElementById('remarks').value = remarks;
+
+    var searchParams = new URLSearchParams(window.location.search);
+    var myForm = document.getElementById('addCaseForm');
+    myForm.setAttribute("action", window.location.origin + '/editCase?userId=' + searchParams.get('id') + '&caseId=' + caseId);
+
+    // Show form
+    var modal = new bootstrap.Modal(document.getElementById('addCaseModal'));
+    modal.show();
 }
 
 /**

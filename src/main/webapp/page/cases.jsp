@@ -48,8 +48,15 @@
                     <strong>Remarks:</strong> ${caseInfo.remarks}
                 </div>
                 <c:if test="${user.type eq 0}">
-                    <div class="delete-btn" onclick="deleteCase(${caseInfo.id}, ${user.id})">
-                        <i class="fas fa-trash"></i> Delete
+                    <div class="action-buttons">
+                        <div class="btn edit-btn"
+                             onclick="editCase(${caseInfo.id}, ${caseInfo.patientId}, '${caseInfo.disease}', '${caseInfo.status}', '${caseInfo.remarks}')">
+                            <i class="fas fa-edit"></i> Edit
+                        </div>
+
+                        <div class="delete-btn" onclick="deleteCase(${caseInfo.id}, ${user.id})">
+                            <i class="fas fa-trash"></i> Delete
+                        </div>
                     </div>
                 </c:if>
             </div>

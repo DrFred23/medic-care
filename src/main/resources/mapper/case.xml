@@ -17,6 +17,20 @@
                 #{updateTime})
     </insert>
 
+    <update id="update" parameterType="com.nci.mediccare.domain.CaseInfo">
+        UPDATE case_info
+        SET patient_id  = #{patientId},
+            patient_name=#{patientName},
+            gender= #{gender},
+            dob=#{dob},
+            disease= #{disease},
+            status=#{status},
+            remarks= #{remarks},
+            create_time= #{createTime},
+            update_time= #{updateTime}
+        WHERE id = #{id}
+    </update>
+
     <delete id="deleteById">
         DELETE
         FROM case_info
@@ -26,6 +40,12 @@
     <select id="selectAllCases">
         SELECT *
         FROM case_info
+    </select>
+
+    <select id="selectById">
+        SELECT *
+        FROM case_info
+        WHERE id = #{caseId}
     </select>
 
     <select id="selectCasesByPatientId">

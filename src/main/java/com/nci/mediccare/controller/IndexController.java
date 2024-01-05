@@ -65,10 +65,30 @@ public class IndexController {
         return "redirect:/cases?id=" + userId;
     }
 
+    @PostMapping("/editCase")
+    public String editCase(@RequestParam long userId, @RequestParam long caseId, @ModelAttribute CaseInfoPojo pojo) {
+        CaseInfo caseInfo = casesManager.selectById(caseId);
+        User patient = userManager.selectById(pojo.getPatientId());
+        if (caseInfo == null || patient == null) {
+            return "redirect:/cases?id=" + userId;
+        }
+
+        caseInfo.setUpdateTime(new Date());
+        caseInfo.setStatus(pojo.getStatus());
+        caseInfo.setDisease(pojo.getDisease());
+        caseInfo.setRemarks(pojo.getRemarks());
+        caseInfo.setPatientId(pojo.getPatientId());
+        caseInfo.setPatientName(patient.getUsername());
+
+        casesManager.update(caseInfo);
+
+        return "redirect:/cases?id=" + userId;
+    }
+
     @PostMapping("/deleteCase")
     public String deleteCase(@RequestBody DoctorCasePojo pojo) {
         casesManager.deleteById(pojo.getCaseId());
         return "redirect:/cases?id=" + pojo.getDoctorId();
     }
-    
+
 }
