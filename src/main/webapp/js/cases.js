@@ -82,6 +82,7 @@ fetch(`${weatherUrl}?q=${city}`, {
 })
     .then(response => response.json())
     .then(data => {
+        document.getElementById('location').innerText = data.location.name;
         document.getElementById('weatherDescription').innerText = data.current.condition.text;
         document.getElementById('weatherIcon').src = `https:${data.current.condition.icon}`;
         document.getElementById('temperature').innerText = `${data.current.temp_c}℃`;
