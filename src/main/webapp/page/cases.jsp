@@ -29,8 +29,26 @@
 <div class="container">
     <!-- Adjusted width for .case-container -->
     <div class="case-container">
-        <div class="case-item">
-            <h2 class="case-header">Medical Case List</h2>
+        <div class="case-item case-header-container">
+            <div class="container mt-3">
+                <h2 class="case-header">Medical Case List</h2>
+            </div>
+            <c:if test="${user.type eq 0}">
+                <div id="search-div" class="container mt-3 justify-content-end custom-row ml-auto">
+                    <div class="col-md-6 ml-auto w-100">
+                        <div class="input-group">
+                            <input id="patient-name" type="text" class="form-control"
+                                   placeholder="Search cases by patient name" aria-label="Recipient's username"
+                                   aria-describedby="button-addon2" spellcheck="false" data-ms-editor="true">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" onclick="searchCases()">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
         </div>
         <c:if test="${empty caseInfos}">
             <div>
@@ -146,6 +164,9 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script src="../js/cases.js"></script>
 

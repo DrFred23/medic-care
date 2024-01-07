@@ -17,4 +17,6 @@ public interface CasesManager {
     CaseInfo selectById(Long caseId);
 
     List<CaseInfo> selectCasesByPatientId(long patientId);
+
+    List<CaseInfo> selectCasesByPatientName(String patientName);
 }

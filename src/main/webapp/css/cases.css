@@ -37,7 +37,7 @@ body {
 
 }
 
-.case-item .action-buttons div{
+.case-item .action-buttons div {
     margin-right: auto;
 }
 
@@ -69,4 +69,9 @@ body {
     border-radius: 5px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-container {
+    margin-top: 5px;
+    max-width: max-content;
 }

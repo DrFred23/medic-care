@@ -48,6 +48,12 @@ public class IndexController {
         return "page/cases";
     }
 
+    @ResponseBody
+    @GetMapping("/search")
+    public List<CaseInfo> search(@RequestParam String patientName) {
+        return casesManager.selectCasesByPatientName(patientName);
+    }
+
     @PostMapping("/createCase")
     public String createCase(@RequestParam long userId, @ModelAttribute CaseInfoPojo pojo) {
         User patient = userManager.selectById(pojo.getPatientId());

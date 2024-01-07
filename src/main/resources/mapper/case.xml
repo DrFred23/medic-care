@@ -54,4 +54,10 @@
         WHERE patient_id = #{patientId}
     </select>
 
+    <select id="selectCasesByPatientName">
+        SELECT *
+        FROM case_info
+        WHERE patient_name LIKE CONCAT('%', #{patientId}, '%')
+    </select>
+
 </mapper>

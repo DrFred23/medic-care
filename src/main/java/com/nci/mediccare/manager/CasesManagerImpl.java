@@ -42,4 +42,9 @@ public class CasesManagerImpl implements CasesManager {
     public List<CaseInfo> selectCasesByPatientId(long patientId) {
         return caseMapper.selectCasesByPatientId(patientId);
     }
+
+    @Override
+    public List<CaseInfo> selectCasesByPatientName(String patientName) {
+        return caseMapper.selectCasesByPatientName(patientName);
+    }
 }

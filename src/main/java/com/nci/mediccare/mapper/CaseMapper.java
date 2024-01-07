@@ -19,4 +19,6 @@ public interface CaseMapper {
     CaseInfo selectById(Long caseId);
 
     List<CaseInfo> selectCasesByPatientId(long patientId);
+
+    List<CaseInfo> selectCasesByPatientName(String patientName);
 }
