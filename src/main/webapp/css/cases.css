@@ -1,4 +1,5 @@
 body {
+    background-image: url('../img/medical_background.jpg');
     background-color: #f8f9fa;
     color: #495057;
 }
@@ -9,7 +10,7 @@ body {
 
 /* Adjusted width for .case-container */
 .case-container {
-    background-color: #fff;
+    background-color: #f9f0d0;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

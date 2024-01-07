@@ -41,7 +41,6 @@ if (addCaseForm) {
 }
 
 function editCase(caseId, patientId, disease, status, remarks) {
-    console.log(patientId);
     document.getElementById('patientName').value = patientId;
     document.getElementById('disease').value = disease;
     document.getElementById('status').value = status;

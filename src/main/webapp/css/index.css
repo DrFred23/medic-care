@@ -1,5 +1,5 @@
 body {
-    background-image: url('../img/medical_background.jpg'); /* 替换成你的背景图片路径 */
+    background-image: url('../img/medical_background.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -22,9 +22,8 @@ body {
     margin: 20px;
 }
 
-/* 添加自定义样式 */
 .feature-box {
-    background-color: #efc855; /* 浅橙色背景 */
+    background-color: #efc855;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
