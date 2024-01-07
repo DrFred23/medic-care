@@ -29,7 +29,9 @@
 <div class="container">
     <!-- Adjusted width for .case-container -->
     <div class="case-container">
-        <h2 class="case-header">Medical Case List</h2>
+        <div class="case-item">
+            <h2 class="case-header">Medical Case List</h2>
+        </div>
         <c:if test="${empty caseInfos}">
             <div>
                 <p>You don't have medical records yet.</p>
@@ -65,7 +67,8 @@
         <!-- Add Case Button -->
         <c:if test="${user.type eq 0}">
             <div class="add-case-btn">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCaseModal">Add
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#addCaseModal">Add
                     Case
                 </button>
             </div>
