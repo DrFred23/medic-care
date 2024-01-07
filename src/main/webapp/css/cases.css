@@ -60,18 +60,18 @@ body {
     text-align: center;
 }
 
-/* Translation Plugin Styles */
-.translation-plugin {
-    position: fixed;
-    top: 150px; /* Adjust the top position as needed */
-    right: 5px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 .custom-container {
     margin-top: 5px;
     max-width: max-content;
 }
+
+.translation-plugin {
+    right: 0;
+    margin: 20px;
+    z-index: 1000;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
